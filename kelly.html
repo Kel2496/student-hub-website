@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Kelly</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="website-project/assets/css/styles.css">
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Link confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+    <!-- Link to External JavaScript -->
+    <script src="website-project/assets/js/script.js" defer></script>
+    <!-- Link to favicon -->
+    <link rel="icon" href="website-project/images/favicon.png" type="image/png">
+    <!-- Older way to specify favicon. Still used on
+    Internet Explorer so need both -->
+    <link rel="shortcut icon" href="website-project/images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"> <!-- hyperlink to index.html -->
+                    <img src="website-project/images/logo-no-bg.png" alt="Brainiacs logo" class="logo">
+                </a>
+            </div>
+            <button id="greyscale-toggle" class="greyscale-btn-small">Greyscale mode</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="submenu">
+                    <a href="about.html">About</a>
+                    <ul class="sub-menu">
+                        <li><a href="kelly.html">Kelly</a></li>
+                        <li><a href="sean.html">Sean</a></li>
+                        <li><a href="sebastian.html">Sebastian</a></li>
+                        <li><a href="eoin.html">Eoin</a></li>
+                    </ul>
+                </li> 
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+            We use cookies to improve your experience. By continuing to browse the site, you agree to our 
+            <a href="terms-and-conditions.html">Terms and Conditions</a>. 
+            <span>Do you accept cookies?</span>
+            <button id="accept-cookies">Accept</button>
+            <button id="reject-cookies">Reject</button>
+        </p>
+    </div>
+
+    <main class="page-container">
+        <section id="kelly">
+            <h1>About Kelly</h1>
+            <p>Hi! I'm Kelly, but most people call me Kels. I'm 29 and I'm from Northern Ireland and I am currently in my first year of studying Software Engineering at Ulster University. I got married last year and we are expecting our first baby (or bebe as Moira Rose says!). I love coding, reading, and chilling with my tarantula (Aries) and dog (Lacey). Fun fact about me: my spine is in the shape of an S! But you're not allowed to call me Quasimodo hahaha.</p>
+        </section>
+
+        <!-- Image of Kelly and her dog Lacey -->
+        <section id="kelly-pic">
+            <img src="website-project/images/kelly-pic.png" alt="A picture of Kelly and her dog Lacey smiling together" class="kelly-image">
+        </section>
+
+        <section id="favorites">
+            <h2>Some of My Fave Things</h2>
+            <p>My favourite movie (and books) of all time is Harry Potter! I've watched the movies and read the books an embarrassing amount of times. My guilty pleasures are MAFs and the Kardashians - don't tell anyone! In terms of food, it has to be the famous Porto francesinha.</p>
+            <div class="image-gallery">
+                <!-- Image sourced from https://harrypotterbloodstatus.wordpress.com/wp-content/uploads/2014/12/hogwarts_logo.png -->
+                <img src="website-project/images/hogwarts.png" alt="Hogwarts logo" class="favourite-image">
+                <!-- Image sourced from https://www.theguardian.com/tv-and-radio/2022/apr/14/kardashians-hulu-disney-plus-review -->
+                <img src="website-project/images/kardashians.png" alt="The Kardashian family" class="favourite-image">
+                <!-- Image sourced from https://feed.continente.pt/receitas/francesinha -->
+                <img src="website-project/images/francesinha.png" alt="Porto's famous food dish: the Francesinha" class="favourite-image">
+                <!-- Image sourced from https://www.nineforbrands.com.au/media-release/married-at-first-sights-domenica-calarco-unveils-digital-exclusive-series/ -->
+                <img src="website-project/images/mafs.png" alt="Married At First Sight logo" class="favourite-image">
+            </div>
+        </section>
+
+        <section id="map">
+            <h2>Check out the area I was born in!</h2>
+            <h3>(Disclaimer: not responsible for any boredom this may cause)</h3>
+            <!-- Map template used from https://www.maps.ie/create-google-map/ -->
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Craigavon,%20Northern%20Ireland+(Where%20Kelly%20is%20from)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </section>
+        
+        <canvas id="confetti-canvas"></canvas>
+        <section id="quiz">
+            <h2>Are you a Brainiac? Test your knowledge!</h2>
+            <p>What is my favourite book?</p>
+            <input type="text" id="quiz-answer" data-char-count="30" class="form-control" placeholder="Enter your answer">
+            <p id="quiz-answer-char-count" class="char-count">30 characters remaining</p>
+            <button id="submit-answer" class="btn">Submit</button>
+            <p id="quiz-result"></p>
+        </section>
+    </main>
+
+
+    <footer>
+        <button class="btn" onclick="location.href='contact-us.html'">Get in touch</button>
+        <p>© 2025 Brainiacs. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn">↑</button>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Website</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="website-project/assets/css/styles.css">
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Link to External JavaScript -->
+    <script src="website-project/assets/js/script.js"></script>
+    <!-- Link to favicon -->
+    <link rel="icon" href="website-project/images/favicon.png" type="image/png">
+    <!-- Older way to specify favicon. Still used on
+    Internet Explorer so need both -->
+    <link rel="shortcut icon" href="website-project/images/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"> <!-- hyperlink to index.html -->
+                    <img src="website-project/images/logo-no-bg.png" alt="Brainiacs logo" class="logo">
+                </a>
+            </div>
+            <button id="greyscale-toggle" class="greyscale-btn-small">Greyscale mode</button>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="submenu">
+                    <a href="about.html">About</a>
+                    <ul class="sub-menu">
+                        <li><a href="kelly.html">Kelly</a></li>
+                        <li><a href="sean.html">Sean</a></li>
+                        <li><a href="sebastian.html">Sebastian</a></li>
+                        <li><a href="eoin.html">Eoin</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+            We use cookies to improve your experience. By continuing to browse the site, you agree to our
+            <a href="terms-and-conditions.html">Terms and Conditions</a>.
+            <span>Do you accept cookies?</span>
+            <button id="accept-cookies">Accept</button>
+            <button id="reject-cookies">Reject</button>
+        </p>
+    </div>
+
+    <!-- Interactive greeting pop-up -->
+    <div id="popup" class="popup">
+        <p id= "greetingMessage"></p>
+        <p id= "DateTime"></p>
+        <img id = "greetingimage" src="" alt="Greeting Image">
+        <button id="closepopup" class="btn">Hi Brainiacs!</button>
+    </div>
+
+    <main class="page-container">
+        <section id="welcome">
+            <h1>Welcome to Brainiacs!</h1>
+            <p>We set this website up as part of our first year project. You'll find information about each of us and some fun little quirks throughout our individual sections. Have fun exploring!</p>
+            <section class="hero">
+                <!-- Video Background -->
+                <div class="video-background">
+                    <video autoplay muted loop>
+                        <!-- Image sourced from -->
+                        <source src="website-project/videos/hero_video.mp4" type="video/mp4" alt="Student typing on a laptop">
+                        <!-- fallback image in case the video doesn't load -->
+                        <!-- Image sourced from -->
+                        <img src="website-project/images/backup_hero.jpg" alt="Student taking notes">
+                    </video>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    
+                    <a href="about.html" class="hero-button">Come get to know us more!</a>
+                </div>
+            </section>
+
+            <div id="content">
+                <article>
+                  <h2>Insight into the life of a computing student</h2>
+
+                  <!-- Carousel Container -->
+                  <div class="menu-carousel">
+                    <div class="menu-header-container">
+                      
+                    </div>
+                    <div class="carousel-container">
+                      <div class="carousel">
+                        <div class="carousel-item">
+                          <img src="website-project/images/code.jpg" alt="image of website code: Sourced from https://pixabay.com/get/g28fdbf4c31c1e0553e6d1c77e830d2f50a2850cffe9d8239e50a449fcfda69b2427eded37e80969943d49b1bb0cd66df83f0f66730ae6f9c14962a2e544ebaeeb56ce63fc09afa5316a27f3823703d1d_1280.jpg?attachment=">
+                          
+                        </div>
+                        <div class="carousel-item">
+                          <img src="website-project/images/people.jpg" alt="people studying together: Sourced from https://pixabay.com/get/g2259f705246d36bf4dd67986712dbc2405ed55d296f808923e53a23d6f523b24cb40756301048e1fb8a4261f615244fd610c91d6ea70e5dbe98624da01034f32e9c2d1089c76a573e566d51990976470_1280.jpg?attachment=">
+                          
+                        </div>
+                        <div class="carousel-item">
+                          <img src="website-project/images/university.jpg" alt="A lecture theatre: Sourced from https://pixabay.com/get/gf0aee27af46c6ec068c3893f0dd7d668e07ebe316169c2e560b95d3da4afba3b2fc8cfb17ae328f9b50c1223f794c5cdcabf10fda429c42859566f24034a1b183c20c56f6298533e2ba8b44d173ab5c4_1280.jpg?attachment=">
+                          
+                        </div>
+                      </div>
+                    </div>
+                      <!-- End of Carousel Container -->
+        
+
+        <section id="index-quiz-section">
+            <h2>Are you a true Brainiac? Prove it!</h2>
+            <div id="index-quiz-container">
+                <p id="index-quiz-question"></p>
+                <div id="index-quiz-options"></div>
+                <button id="index-submit-answer" class="btn">Submit Answer</button>
+                <p id="index-quiz-feedback"></p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <button class="btn" onclick="location.href='contact-us.html'">Get in touch!</button>
+        <p>© 2025 Brainiacs. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn">↑</button>
+
+</body>
+</html>

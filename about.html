@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Website</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="website-project/assets/css/styles.css">
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Link to External JavaScript -->
+    <script src="website-project/assets/js/script.js" defer></script>
+    <!-- Link to favicon -->
+    <link rel="icon" href="website-project/images/favicon.png" type="image/png">
+    <!-- Older way to specify favicon. Still used on
+    Internet Explorer so need both -->
+    <link rel="shortcut icon" href="website-project/images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"> <!-- hyperlink to index.html -->
+                    <img src="website-project/images/logo-no-bg.png" alt="Brainiacs logo" class="logo">
+                </a>
+            </div>
+            <button id="greyscale-toggle" class="greyscale-btn-small">Greyscale mode</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="submenu">
+                    <a href="about.html">About</a>
+                    <ul class="sub-menu">
+                        <li><a href="kelly.html">Kelly</a></li>
+                        <li><a href="sean.html">Sean</a></li>
+                        <li><a href="sebastian.html">Sebastian</a></li>
+                        <li><a href="eoin.html">Eoin</a></li>
+                    </ul>
+                </li> 
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+            We use cookies to improve your experience. By continuing to browse the site, you agree to our 
+            <a href="terms-and-conditions.html">Terms and Conditions</a>. 
+            <span>Do you accept cookies?</span>
+            <button id="accept-cookies">Accept</button>
+            <button id="reject-cookies">Reject</button>
+        </p>
+    </div>
+    
+    <main class="page-container">
+        <section id="about-us">
+            <h1>About the Brainiacs</h1>
+            <p>We're a group of first year students studying different Computing courses at Ulster University. Get to know more about us!</p>
+
+            <div class="student-cards">
+                <div class="student-card">
+                    <img src="website-project/images/kelly-about-pic.png" alt="Kelly's Picture for About section">
+                    <h3>Kelly</h3>
+                    <p>Click to learn more about Kelly.</p>
+                    <a href="kelly.html" class="student-link">Learn More</a>
+                </div>
+                <div class="student-card">
+                    <img src="website-project/images/sebastian.png" alt="Sebastian's Picture for About section">
+                    <h3>Sebastian</h3>
+                    <p>Click to learn more about Sebastian.</p>
+                    <a href="sebastian.html" class="student-link">Learn More</a>
+                </div>
+                <div class="student-card">
+                    <img src="website-project/images/selfie_eoin.jpg" alt="Eoin's Picture for About section">
+                    <h3>Eoin</h3>
+                    <p>Click to learn more about Eoin.</p>
+                    <a href="eoin.html" class="student-link">Learn More</a>
+                </div>
+                <div class="student-card">
+                    <img src="website-project/images/seans-pic.png" alt="Sean's Picture for About section">
+                    <h3>Sean</h3>
+                    <p>Click to learn more about Sean.</p>
+                    <a href="sean.html" class="student-link">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <button class="btn" onclick="location.href='contact-us.html'">Get in touch</button>
+        <p>© 2025 Brainiacs. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn">↑</button>
+
+</body>
+</html>

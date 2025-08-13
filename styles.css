@@ -1,0 +1,932 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e1eff3;
+    color: #003e5c; 
+    text-align: justify; 
+    /* Background image sourced from https://openverse.org/image/6f483335-637c-4fc2-9d8d-6023e4beb457?q=blue+gradient&p=55 */
+    background-image: url('/website-project/images/bg-image.png');
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+}
+
+/* Header and Footer */
+header, footer {
+    background: linear-gradient(to bottom, #003366, #006699);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-weight: bold;
+    display: flex;    
+    justify-content: space-between; 
+    align-items: center;         
+    position: relative;
+    padding-left: 20px;          
+    padding-right: 20px;  
+}
+
+header nav {
+    display: flex;               
+    justify-content: flex-start;  
+    width: 100%;                  
+}
+
+header nav ul {
+    list-style-type: none;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: block;
+    background-color: #007aa1; 
+    border-radius: 30px; 
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #003e5c; 
+}
+
+footer {
+    font-size: 14px;
+    background-color: #003e5c;
+    padding: 15px 0;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Headings */
+h1 {
+    color: #00acc1; 
+}
+
+/* Style for the main navigation */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;                
+    justify-content: flex-start; 
+    align-items: center;         
+    margin-left: auto;           
+    
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative; /* Needed for submenu positioning */
+}
+
+/* Dropdown menu styles */
+.submenu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 120px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+}
+
+/* Show submenu on hover */
+.submenu:hover .sub-menu {
+    display: block;
+}
+
+/* Submenu item styling */
+.sub-menu li {
+    padding: 8px 15px;
+    border-top: 1px solid #005b80; 
+    background-color: transparent; 
+}
+
+/* Submenu link styling */
+.sub-menu li a {
+    color: #003e5c; 
+    font-size: 0.9rem;
+    text-decoration: none; 
+    display: block;
+    padding: 0;
+    margin: 0; 
+}
+
+/* Remove background color */
+header nav ul li .sub-menu li a {
+    background-color: transparent;
+}
+
+/* Hover effect on submenu items */
+.sub-menu li a:hover {
+    color: #00acc1; 
+    background-color: transparent;
+}
+
+/* Remove top border from the first item */
+.sub-menu li:first-child {
+    border-top: none;
+}
+
+/* Ensure padding and border are included in width calculations */
+* {
+    box-sizing: border-box;
+}
+
+/* Logo positioning and style */
+.logo-container {
+    flex-shrink: 0;   
+}
+
+.logo {
+    width: 90px; 
+    height: auto; 
+}
+
+/* Responsive behavior of nav menu and logo */
+@media screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap; 
+        gap: 10px;
+    }
+
+    header nav ul {
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 5px;
+    }
+
+    .logo {
+        width: 75px; 
+    }
+}
+
+/* Form Styles for all form fields */
+.form-control {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #005b80;
+    border-radius: 6px;
+    background-color: #e0f7fa; 
+    color: #003e5c;
+    display: block; 
+}
+
+#message {
+    width: 100%;
+    height: 150px; 
+}    
+
+textarea {
+    font-family: 'Poppins', Arial, sans-serif; 
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 25px;
+    background-color: #005b80;; 
+    color: white;
+    border: none;
+    border-radius: 25px; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #003e5c; 
+    transform: scale(1.05);
+}
+
+/* Back to Top Button Styles */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    width: 60px;
+    height: 60px;
+    background-color: #00acc1; 
+    color: white;  
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50%;  
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    display: none;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+/* Hover effect */
+.back-to-top-btn:hover {
+    background-color: #006699;
+    transform: scale(1.1); 
+}
+
+/* Required fields */
+form label .required {
+    color: red;
+    font-weight: bold;
+}
+
+/* About Us student cards section for selecting a student to learn more about */
+.student-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.student-card {
+    width: 250px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.student-card h3 {
+    margin: 15px 0 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.student-card p {
+    color: #666;
+    font-size: 16px;
+}
+
+.student-card .student-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #00acc1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.student-card:hover .student-link {
+    background-color: #006699;
+    transform: scale(1.1);
+}
+
+/* Success Popup upon contact form submission */
+#success-popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; 
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Char count styling on contact us form and quiz */
+.char-count {
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Page Sections */
+.page-container {
+    position: relative; 
+    margin: 20px; 
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #005b80;
+    overflow: hidden; 
+}
+
+/* Hover Interaction with all page titles globally */
+h1, h2, h3, h4, h5, h6 {
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    color: #00a9c2; 
+    transition: color 0.3s, transform 0.3s; 
+    margin-bottom: 10px;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #003e5c; 
+    transform: scale(1.05); 
+}
+
+/* Confetti Effect for quiz */
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; 
+    z-index: 9999; 
+}
+
+/* Quiz answer colours incorrect vs correct */
+.quiz-correct {
+    color: green;
+    font-weight: bold;
+}
+
+.quiz-incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+/* Styling for the image of Kelly and Dog on her About page */
+#kelly-pic {
+    text-align: center;
+    margin: 30px 0; 
+}
+
+.kelly-image {
+    max-width: 30%;
+    height: auto;    
+    border-radius: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Zoom-in effect on hover */
+.kelly-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+@media (max-width: 600px) {
+    .kelly-image {
+        max-width: 90%;
+    }
+}
+
+/* Styling for Kelly's Favourites section */
+#favourites {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#favourites h2 {
+    font-size: 2rem;
+    color: #00acc1;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.favourite-image {
+    width: 130px;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotate(45deg); /* Rotate the image to form a diamond shape */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Hover effect for images in gallery */
+.favourite-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the image of Sebastian on About page */
+#sebastian-pic {
+    text-align: center;
+    margin: 30px 0; 
+}
+
+.sebastian-image {
+    max-width: 30%;
+    height: auto;  
+    border-radius: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+@media (max-width: 600px) {
+    .sebastian-image {
+        max-width: 90%;
+    }
+}
+
+/* Zoom-in effect on hover */
+.sebastian-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Cookie Consent Banner */
+.cookie-banner {
+    background-color: #003366; 
+    color: white;
+    padding: 20px 15px;
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    border-radius: 10px 10px 0 0; 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.cookie-banner button {
+    margin-left: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007aa1; 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cookie-banner button:hover {
+    background-color: #006699;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-banner a {
+    color: #e0f7fa; 
+    text-decoration: underline;
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+}
+
+.cookie-banner a:hover {
+    color: #ffffff; 
+}
+
+.cookie-banner p {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 75%; 
+}
+
+/* Mobile-specific adjustments for cookie banner */
+@media (max-width: 600px) {
+    .cookie-banner {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+
+    .cookie-banner p {
+        max-width: 100%;
+    }
+
+    .cookie-banner button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Sean's quiz */
+container {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 30px 0;
+    padding: 20px;
+    text-align: center;
+}
+.seans-container .options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.seans-container .option{
+    border: none;
+    padding: 24px 32px;
+    font-size: 18px;
+    background-color:  #003e5c ;
+    color: white;
+    transform: skew(-20deg);
+}
+.seans-container .option:hover{
+    background-color: #006699;
+    transform: translateY(-10px);
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
+    }
+
+.seans-container button{
+    cursor: pointer;
+}
+.disabled{
+    pointer-events: none;
+}
+.option.correct:hover{
+    background-color:#00ff00;
+    color: #222;
+    border: none;
+    padding: 24px 32px;
+    font-size: 18px;
+    transform: skew(-20deg);
+}
+.option.incorrect:hover{
+    background-color:#ff0000 ;
+    color: white;
+    border: none;
+    padding: 24px 32px;
+    font-size: 18px;
+    transform: skew(-20deg);
+}
+
+/* Homepage Popup styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px; 
+    font-weight: bold;
+}
+
+.popup img {
+    margin: 20px auto;
+        width: 120px;
+        height: auto;
+        display: block;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in transition */
+.popup {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Keyframes for smooth fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Style elements for Sean's images */
+.fussy{
+    font-style: times new roman;
+    font-size: 20px;
+    text-align: center;
+
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.column img{
+    width: 200px;
+    height: auto;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+.column:hover {
+    transform: translateY(-10px);
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
+}
+
+/* Style elements for Eoin's page */
+/* Container for the floating images */
+.image-row {
+display: flex;
+justify-content: space-between;  /* Space between the images */
+gap: 20px;  /* Optional: Add gap between images */
+align-items: center;
+}
+
+/* Style for each individual image container */
+.floating-image {
+transition: transform 0.3s ease;
+width: 30%;  /* Adjust the width as needed */
+}
+
+/* Floating image effect */
+.floating-image img {
+width: 100%;
+border-radius: 8px;  /* Optional: Make the images rounded */
+}
+
+.floating-image:hover img {
+transform: translateY(-10px);  /* Floating effect */
+}
+
+/* Index page quiz styling */
+/* Increase space between submit button on Index page quiz and last answer */
+#index-submit-answer {
+    margin-top: 20px; 
+}
+
+/* Make the index quiz question bold */
+#index-quiz-question {
+    font-weight: bold; 
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.hero {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 2rem; /* Adjust size as needed */
+    color: #ffffff ;
+    /* Change text color */
+}
+
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: black (0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    padding: 20px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px #ffff; 
+    background-color: #005b80;
+
+}
+
+.hero-content p {
+    font-size: 2rem;
+}
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 24px 48px;
+    font-size: 2.4rem;
+    color: #ffffff;
+    background-color: rgba(0, 119, 182, 0.7); /* 0.7 = 70% opaque */
+
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button:hover {
+    background-color: #00b4d8;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+/* End of hero section*/
+
+
+/* Greyscale toggle */
+.greyscale {
+    filter: grayscale(100%);
+    background-image: url('/website-project/images/bg-image-greyscale.png');
+}
+
+.greyscale-btn-small {
+    padding: 0.5rem 1rem;       
+    background-color: #005b80;  
+    color: white;
+    width: auto; 
+    height: 50px;
+    border: none;
+    border-radius: 20px;       
+    font-size: 1rem; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, filter 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto 0; 
+    text-align: center; 
+    display: block; 
+}
+
+.greyscale-btn-small:hover {
+    background-color: #003e5c; 
+    transform: scale(1.05);     
+}
+
+/* eoins favourites css */
+#favorites .image-gallery {
+    display: flex;
+    gap: 1rem; /* space between images */
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+    justify-content: center;
+    padding: 1rem;
+}
+
+#favorites .image-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px; /*  rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*  subtle shadow */
+    transition: transform 0.3s ease; /*  smooth hover effect */
+}
+
+#favorites .image-gallery img:hover {
+    transform: scale(1.05); /*  slight zoom on hover */
+}
+
+/* End of Eoin's favourites */
+
+/* Slideshow container */
+carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+
+.carousel {
+  display: flex;
+  width: 300%; /* 3 items */
+  animation: rotate 90s linear infinite;
+}
+
+.carousel-item {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.carousel-item h4 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.carousel-item p {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+@keyframes rotate {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-33.33%); }
+  66%  { transform: translateX(-66.66%); }
+  100% { transform: translateX(0); }
+}
+
+.image-gallery img,
+.carousel-item img {
+    width: 75%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover,
+.carousel-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+/* End of Slideshow container */
